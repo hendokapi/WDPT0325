@@ -1,0 +1,53 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double+Ink:wght@100..900&display=swap'); */
+
+/* html {
+    font-family: 'Bitcount Prop Double Ink', sans-serif;
+} */
+
+h1 {
+    color: red;
+    font-family: 'Bitcount Prop Double Ink', sans-serif;
+    font-weight: 900;
+}
+
+h2 {
+    color: gold;
+}
+
+.special {
+    background-color: salmon;
+}
+
+.ultimi {
+    color: red;
+}
+
+#terzo {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sfondato {
+    background-image: url('Image_created_with_a_mobile_phone.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    font-weight: 900;
+}
+
+.lorem {
+    backdrop-filter: blur(20px) brightness(250%);
+}
+
+.bloccone {
+    background-color: brown;
+    height: 500px;
+    /* display: inline; */
+    /* display: none; */
+    visibility: hidden;
+}
+
+span {
+    display: block;
+}
