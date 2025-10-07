@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10000" height="10000" viewBox="0 0 10000 10000">
+  <line x1="5000" y1="0" x2="5000" y2="10000" stroke="black" stroke-width="3"/>
+  <line x1="0" y1="5000" x2="10000" y2="5000" stroke="black" stroke-width="3"/>
+</svg>

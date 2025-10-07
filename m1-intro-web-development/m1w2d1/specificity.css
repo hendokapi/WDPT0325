@@ -1,0 +1,82 @@
+/* reset base */
+* {
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #222;
+    color: white;
+}
+
+::selection {
+    background-color: greenyellow;
+    color: greenyellow;
+}
+
+/* stile */
+
+.colorato {
+    margin: 0;
+}
+
+p {
+    margin: 20px;
+}
+
+p {
+    margin: 50px;
+}
+
+#par {
+    margin: 100px;
+    /* margin: 100px !important; */
+}
+
+.a ul,
+.c ul {
+    margin-left: 20px;
+}
+
+li:nth-child(5) {
+    color: red;
+}
+
+/* :not(ul.spesa) {
+    background-color: salmon;
+} */
+
+.colorato {
+    width: 100px;
+    height: 100px;
+    background-color: goldenrod;
+}
+
+.colorato:hover {
+    background-color: brown;
+    border: solid 10px red;
+}
+
+/* :focus-visible {
+    background-color: red;
+    color: white;
+} */
+
+input:focus {
+    background-color: blue;
+    color: white;
+}
+
+li:first-child,
+li:last-child {
+    text-decoration: underline;
+}
+
+li:empty {
+    background-color: blueviolet;
+}
+
+li::marker {
+    color: white;
+}
