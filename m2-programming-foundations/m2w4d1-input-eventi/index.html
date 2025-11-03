@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input ed eventi</title>
+</head>
+
+<body>
+    <form action="/index.html" method="POST">
+        <!-- <input type="submit" value="Submit"> -->
+
+        <button>Invia</button>
+
+        <br><br>
+
+        <label for="name">Nome:</label>
+        <input id="name" type="text" placeholder="Pingu" name="nome">
+
+        <br>
+
+        <label>
+            Cognome: <input type="text" name="cognome">
+        </label>
+
+        <br>
+        <label for="lamail">Email:</label>
+        <input id="lamail" type="email" placeholder="asdf@asdf.it" name="email">
+        <br>
+        <label for="password">Password:</label>
+        <input id="password" type="password" name="pass">
+        <br><br>
+        <input type="checkbox" name="accetto" id="accetto" checked>
+        <label for="accetto">Accetto i termini</label>
+
+        <br><br>
+        <input type="radio" name="gender" id="male" value="m">
+        <label for="male">M</label>
+        <input type="radio" name="gender" id="female" value="f">
+        <label for="female">F</label>
+        <br>
+        <!-- <input type="radio" name="ciao" id="opt1">
+        <input type="radio" name="ciao" id="opt2" checked>
+        <input type="radio" name="ciao" id="opt3"> -->
+
+        <br><br>
+        <label for="andamento">Come va con Javascript?</label>
+        <select name="andamento" id="andamento">
+            <option value=""></option>
+            <option value="2">Bene</option>
+            <option value="0">Male</option>
+            <option value="3">Fantastico</option>
+            <option value="1">...</option>
+        </select>
+
+        <br><br>
+        <label for="storia">Scrivi la storia della tua vita</label>
+        <textarea name="vita" id="storia" rows="10" style="display: block; width: 100%"></textarea>
+
+        <br><br>
+        <label for="birth_date">Nascita:</label>
+        <input type="date" name="birth" id="birth_date">
+        <br>
+        <label for="fingers">N dita</label>
+        <input type="number" name="dita" id="fingers" min="0" max="20">
+        <br>
+        <input type="file" name="file" id="ilfile">
+        <br>
+        <input type="color" name="color" id="ilcolore">
+        <br>
+
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
