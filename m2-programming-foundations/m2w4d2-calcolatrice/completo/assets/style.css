@@ -9,7 +9,7 @@
     box-sizing: border-box;
 }
 
-:root {
+html {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 50px;
 }
@@ -33,45 +33,38 @@ body {
 }
 
 .display {
-    font-family: 'Liquid Crystal';
     width: 100%;
-}
-
-.display {
-    border: solid black 1px;
+    padding: 0.5em;
+    background-color: lightgray;
+    border: 2px solid black;
+    font-family: 'Liquid Crystal';
     text-align: end;
 }
 
-.display:hover {
-    cursor: pointer;
-}
-
 .btn {
-    width: 25%;
-    aspect-ratio: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid black 1px;
+    width: 25%;
+    padding: 0.2em;
+    aspect-ratio: 1;
+    border: 2px solid black;
 }
 
-.display,
-.btn {
-    padding: 0.25em;
-}
-
-.display,
 .btn-num {
-    background-color: gainsboro;
+    background-color: lightgray;
 }
 
 .btn-op {
     background-color: greenyellow;
 }
 
+.display:hover {
+    cursor: not-allowed;
+}
+
 .btn:hover {
     cursor: pointer;
-    backdrop-filter: grayscale(100%);
 }
 
 .btn-num:hover {

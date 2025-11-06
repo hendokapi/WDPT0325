@@ -56,10 +56,10 @@ function numberPressed(event) {
         startNewNumber = false;
     }
     numberOnDisplay = numberOnDisplay * 10 + num;
-    console.log(numberOnDisplay);
     eleDisplay.textContent = numberOnDisplay;
+    console.log(numberOnDisplay);
 }
 
-function operatorPressed() {
+function operatorPressed(event) {
     startNewNumber = true;
 }

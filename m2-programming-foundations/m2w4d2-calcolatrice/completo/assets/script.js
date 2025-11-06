@@ -1,34 +1,35 @@
-// ----------------------------
-// SELEZIONE ELEMENTI DEL DOM
-// ----------------------------
+// ---------------------------
+// SELEZIONE ELEMENTI DOM
+// ---------------------------
+
+const eleDisplay = document.querySelector('.display');
+// const eleDisplay = document.getElementsByClassName('display')[0];
+
+const btnProduct = document.querySelector('#btn-product');
+const btnMinus = document.querySelector('#btn-minus');
+const btnPlus = document.querySelector('#btn-plus');
+const btnDivision = document.querySelector('#btn-division');
+const btnEqual = document.querySelector('#btn-equal');
+const btnCanc = document.querySelector('#btn-canc');
 
 const btnsNumbers = [];
 for (let i = 0; i <= 9; i++) {
-    btnsNumbers.push(document.querySelector('.btn-' + i));
+    btnsNumbers.push(document.querySelector('#btn-' + i));
 }
 // console.log(btnsNumbers);
 
-const btnPlus = document.querySelector('.btn-plus');
-const btnMinus = document.querySelector('.btn-minus');
-const btnProduct = document.querySelector('.btn-product');
-const btnDivision = document.querySelector('.btn-division');
-const btnEqual = document.querySelector('.btn-equal');
-const btnCanc = document.querySelector('.btn-canc');
-
-const eleDisplay = document.querySelector('.display');
-
-// ----------------------------
+// ---------------------------
 // VARIABILI DI STATO
-// ----------------------------
+// ---------------------------
 
-let startNewNumber = true;
 let numberOnDisplay = 0;
+let startNewNumber = true;
 let operation = null;
 let result = null;
 
-// ----------------------------
-// EVENT LISTENERS
-// ----------------------------
+// ---------------------------
+// GESTIONE EVENTI
+// ---------------------------
 
 for (btn of btnsNumbers) {
     btn.addEventListener('click', numberPressed);
@@ -72,17 +73,17 @@ document.addEventListener('keydown', function (event) {
 
 logStatus('START');
 
-// ----------------------------
+// ---------------------------
 // FUNZIONI
-// ----------------------------
+// ---------------------------
 
 function numberPressed(event) {
     const num = parseInt(event.target.textContent);
     if (startNewNumber) {
-        startNewNumber = false;
         numberOnDisplay = 0;
+        startNewNumber = false;
     }
-    numberOnDisplay = 10 * numberOnDisplay + num;
+    numberOnDisplay = numberOnDisplay * 10 + num;
     eleDisplay.textContent = numberOnDisplay;
     logStatus('number click');
 }
