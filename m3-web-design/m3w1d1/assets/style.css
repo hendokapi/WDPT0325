@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.rect {
+    width: 500px;
+    height: 250px;
+    background-color: goldenrod;
+    padding: 20px;
+    border: solid red 50px;
+    margin: 50px;
+}
+
+.b {
+    margin-top: 70px;
+}
+
+#first .wrapper ul.list li.list-item .ciao {
+    background-color: salmon;
+}
+
+.rect1 {
+    /* background-color: salmon; */
+}
+
+span {
+    justify-content: center;
+    height: 100px;
+    width: 500px;
+    margin: 20px;
+    padding: 50px;
+}
+
+button {
+    height: 100px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    background-color: salmon;
+    color: white;
+}
+
+/* h1 {
+    background-color: salmon;
+    color: white;
+}
+
+h2 {
+    background-color: salmon;
+    color: white;
+}
+
+h3 {
+    background-color: salmon;
+    color: white;
+}
+
+h4 {
+    background-color: salmon;
+    color: white;
+} */
+
+/* type con valore che inizia per t */
+input[type^='t'] {
+    background-color: yellowgreen;
+}
+
+input[type='text'] {
+    background-color: blueviolet;
+}
+
+/* type con valore che termina per l */
+input[type$='l'] {
+    background-color: red;
+}
