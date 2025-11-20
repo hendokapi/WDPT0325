@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.esterno {
+    width: max-content;
+}
+
+.figlio:nth-child(odd) {
+    background-color: gold;
+}
+
+.figlio:nth-child(even) {
+    background-color: violet;
+}
+
+/*--------------*/
+
+.container1 {
+    height: 150px;
+    background-color: salmon;
+
+    display: flex;
+}
+
+.container1 .figlio {
+    border: 1px solid black;
+    height: 50px;
+    flex-shrink: 1;
+    flex-basis: 2000px;
+}
+
+/*--------------*/
+
+.container2 {
+    height: 150px;
+    background-color: salmon;
+    align-items: stretch;
+    display: flex;
+}
+
+.container2 .figlio {
+    border: 1px solid black;
+    /* height: 50px; */
+    /* flex-grow: 1; */
+    /* flex-basis: 0; */
+    /* width: 33%; */
+
+    flex: 1 0 0;
+
+    /* flex: grow shrink basis */
+}
+
+.container2 .figlio2 {
+    flex-grow: 3;
+}
