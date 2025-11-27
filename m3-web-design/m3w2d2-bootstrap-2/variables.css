@@ -1,0 +1,32 @@
+:root {
+    --primary-color: goldenrod;
+    --secondary-color: salmon;
+    --ciao: 8px;
+    --back-page: black;
+    --text-color: white;
+}
+
+body {
+    background-color: var(--back-page);
+    color: var(--text-color);
+}
+
+h1 {
+    color: var(--primary-color);
+}
+
+.btn {
+    --ciao: 20px;
+    padding: 0.5em;
+    border-radius: 0.3em;
+    background-color: var(--primary-color);
+    border: var(--ciao) solid var(--secondary-color);
+}
+
+.bordered {
+    border: var(--ciao) solid var(--primary-color);
+}
+
+.colored {
+    background-color: var(--secondary-color);
+}
