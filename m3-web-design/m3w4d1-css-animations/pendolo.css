@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    height: 100%;
+    background-color: black;
+}
+
+.pendolo {
+    width: max-content;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* transform: rotate(20deg); */
+    transform-origin: 50% 10px;
+    animation: oscilla 1s linear infinite alternate;
+}
+
+.pendolo:hover {
+    animation-play-state: paused;
+}
+
+.circle-top {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: brown;
+}
+
+.circle-bottom {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: gold;
+}
+
+.cable {
+    width: 5px;
+    height: 250px;
+    background-color: silver;
+}
+
+@keyframes oscilla {
+    0% {
+        transform: rotate(20deg);
+    }
+
+    100% {
+        transform: rotate(-20deg);
+    }
+}
