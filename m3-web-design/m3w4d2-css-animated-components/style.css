@@ -1,0 +1,182 @@
+.gigi-nav {
+    padding-inline: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    color: white;
+    background-color: #76b485;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.hamburger {
+    box-sizing: content-box;
+    height: 3px;
+    width: 30px;
+    border-top: 10px solid #76b485;
+    border-bottom: 10px solid #76b485;
+    background-color: white;
+    position: relative;
+    z-index: 999;
+}
+
+.hamburger:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+}
+
+.hamburger::before {
+    top: -10px;
+}
+
+.hamburger::after {
+    top: 10px;
+}
+
+.hamburger.open::before {
+    animation: ham-top 3s linear forwards;
+}
+
+.hamburger.open::after {
+    animation: ham-bottom 3s linear forwards;
+}
+
+.hamburger.open {
+    animation: ham-middle 3s linear forwards;
+}
+
+.hamburger.close::before {
+    animation-direction: reverse;
+}
+
+.hamburger.close::after {
+    animation-direction: reverse;
+}
+
+.hamburger.close {
+    animation-direction: reverse;
+}
+
+/* @media (min-width: 500px) {
+    .hamburger {
+        display: none;
+    }
+} */
+
+@keyframes ham-middle {
+    50% {
+        background-color: white;
+    }
+
+    51% {
+        background-color: transparent;
+    }
+
+    100% {
+        background-color: transparent;
+    }
+}
+
+@keyframes ham-top {
+    50% {
+        top: 0;
+        transform: rotate(0);
+    }
+
+    100% {
+        top: 0;
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes ham-bottom {
+    50% {
+        top: 0;
+        transform: rotate(0);
+    }
+
+    100% {
+        top: 0;
+        transform: rotate(135deg);
+    }
+}
+
+/* =========================================
+DRAWER
+==========================================*/
+
+.gigi-drawer {
+    position: fixed;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    width: 300px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transform-origin: 100% 0;
+    transform: scaleX(0);
+}
+
+.gigi-drawer .item {
+    padding-block: 10px;
+    border-bottom: 2px solid #99999960;
+}
+
+.gigi-drawer .item:hover {
+    background-color: gray;
+    cursor: pointer;
+}
+
+.gigi-drawer .item:last-of-type {
+    margin-bottom: 30px;
+    border-bottom: none;
+}
+
+.gigi-drawer .btn-apply {
+    display: block;
+    color: white;
+    font-weight: bold;
+    transform: scale(0);
+}
+
+.gigi-drawer.open .btn-apply {
+    animation: pop-button 3s linear forwards 6s;
+    animation-timing-function: cubic-bezier(0.53, 1.66, 0.82, 1.65);
+}
+
+.gigi-drawer.open {
+    animation: slides-right 3s linear forwards 3s;
+}
+
+@keyframes slides-right {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes pop-button {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
