@@ -104,3 +104,12 @@ const prezzoTotale = prodotti.reduce(
     0
 );
 console.log(prezzoTotale);
+
+const ilVostoToken = 'ciaoasdjfalsfjasòfdk';
+const apiResult = fetch('https://rickandmortyapi.com/api/character', {
+    headers: {
+        Authorization: ilVostoToken,
+    },
+})
+    .then((res) => res.json())
+    .then((data) => console.log(data));
