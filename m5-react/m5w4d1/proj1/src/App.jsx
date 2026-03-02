@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -8,6 +8,8 @@ import About from './pages/About';
 import Header from './components/Header';
 import Aside from './components/Aside';
 import Footer from './components/Footer';
+import PostDetails from './pages/PostDetails';
+import NotFound from './pages/NotFound';
 
 function App() {
     return (
@@ -15,11 +17,26 @@ function App() {
             <Header />
             <Container>
                 <Row>
-                    <Col xs={12} md={8} className="bg-primary">
+                    <Col xs={12} md={8}>
                         <main>
                             <Routes>
                                 <Route path="/" element={<Home />} />
                                 <Route path="/about" element={<About />} />
+                                <Route
+                                    path="/posts/:postId"
+                                    element={<PostDetails />}
+                                />
+
+                                {/* <Route path="*" element={<NotFound />} /> */}
+
+                                <Route
+                                    path="/not-found"
+                                    element={<NotFound />}
+                                />
+                                <Route
+                                    path="*"
+                                    element={<Navigate to="/not-found" />}
+                                />
                             </Routes>
                         </main>
                     </Col>

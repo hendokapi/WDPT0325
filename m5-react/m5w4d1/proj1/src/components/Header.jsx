@@ -15,7 +15,7 @@ function Header() {
             </h2> */}
             <Container>
                 <Navbar.Brand as={Link} to="/">
-                    EpiBooks
+                    EpiPosts
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
