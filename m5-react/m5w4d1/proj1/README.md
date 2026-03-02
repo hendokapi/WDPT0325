@@ -3,7 +3,7 @@
 ## Installazione della libreria
 
 ```
-npm install react-router-dom
+npm install react-router
 ```
 
 ## Creazione delle pagine
