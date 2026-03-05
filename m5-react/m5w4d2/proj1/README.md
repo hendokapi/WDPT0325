@@ -9,7 +9,7 @@
     ```
 
 - Aggingere in `package.json` le righe `"test": "npx --node-options=\"--experimental-vm-modules\" jest src",` e `"test:watch": "npx --node-options=\"--experimental-vm-modules\" jest src --watch"` nella sezione scripts:
-    ```
+    ```json
     "scripts": {
             "dev": "vite",
             "build": "vite build",
@@ -21,7 +21,7 @@
     ```
 - Aprire il file `vite.config.js` e aggiungere la riga `testEnvironment: 'jsdom',`:
 
-    ```
+    ```js
     import { defineConfig } from 'vite';
     import react from '@vitejs/plugin-react';
 
@@ -34,7 +34,7 @@
 
 - Creare nella root del progetto il file `.babelrc` e scriverci dentro:
 
-    ```
+    ```json
     {
         "presets": [
             "@babel/preset-env",
@@ -45,7 +45,7 @@
 
 - Creare nella root del progetto il file `jest.config.cjs` e scriverci dentro:
 
-    ```
+    ```js
     module.exports = {
         testEnvironment: 'jsdom',
         moduleNameMapper: {
@@ -56,7 +56,7 @@
 
 - Scrivere i file di test normalmente, assicurandosi di importare questo in cima a ciascun file di test:
 
-    ```
+    ```js
     import '@testing-library/jest-dom';
     import { render, screen } from '@testing-library/react';
 
