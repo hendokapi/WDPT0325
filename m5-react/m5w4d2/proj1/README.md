@@ -8,16 +8,16 @@
     npm i -D jest @testing-library/react @types/jest ts-node @testing-library/jest-dom jest-environment-jsdom @testing-library/dom @testing-library/user-event @babel/preset-env @babel/preset-react jest-fetch-mock
     ```
 
-- Aggingere in `package.json` le righe `"test": "npx --node-options=\"--experimental-vm-modules\" jest src",` e `"test:watch": "npx --node-options=\"--experimental-vm-modules\" jest src --watch"` nella sezione scripts:
+- Aggingere in `package.json` le righe `"npx --node-options=\"--experimental-vm-modules --no-warnings\" jest src",` e `"npx --node-options=\"--experimental-vm-modules --no-warnings\" jest src --watch"` nella sezione scripts:
     ```json
     "scripts": {
-            "dev": "vite",
-            "build": "vite build",
-            "lint": "eslint .",
-            "preview": "vite preview",
-            "test": "npx --node-options=\"--experimental-vm-modules\" jest src",
-            "test:watch": "npx --node-options=\"--experimental-vm-modules\" jest src --watch"
-        },
+        "dev": "vite",
+        "build": "vite build",
+        "lint": "eslint .",
+        "preview": "vite preview",
+        "test": "npx --node-options=\"--experimental-vm-modules --no-warnings\" jest src",
+        "test:watch": "npx --node-options=\"--experimental-vm-modules --no-warnings\" jest src --watch"
+    },
     ```
 - Aprire il file `vite.config.js` e aggiungere la riga `testEnvironment: 'jsdom',`:
 
@@ -43,6 +43,15 @@
     }
     ```
 
+- Creare nella root del progetto il file `setupTests.js` e scriverci dentro:
+
+    ```js
+    import { TextEncoder, TextDecoder } from 'util';
+
+    globalThis.TextEncoder = TextEncoder;
+    globalThis.TextDecoder = TextDecoder;
+    ```
+
 - Creare nella root del progetto il file `jest.config.cjs` e scriverci dentro:
 
     ```js
@@ -51,6 +60,7 @@
         moduleNameMapper: {
             '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
         },
+        setupFiles: ['./setupTests.js'],
     };
     ```
 
@@ -59,6 +69,9 @@
     ```js
     import '@testing-library/jest-dom';
     import { render, screen } from '@testing-library/react';
+    import { it, expect, describe, jest } from '@jest/globals';
+
+    // import { MemoryRouter } from 'react-router'; // se il componente usa il router
 
     // resto del codice del test
     ```

@@ -8,15 +8,15 @@
         "build": "vite build",
         "lint": "eslint .",
         "preview": "vite preview",
-        "test": "npx --node-options=\"--experimental-vm-modules\" jest src",
-        "test:watch": "npx --node-options=\"--experimental-vm-modules\" jest src --watch"
+        "test": "npx --node-options=\"--experimental-vm-modules --no-warnings\" jest src",
+        "test:watch": "npx --node-options=\"--experimental-vm-modules --no-warnings\" jest src --watch"
     },
     "dependencies": {
         "bootstrap": "^5.3.8",
         "react": "^19.2.0",
         "react-bootstrap": "^2.10.10",
         "react-dom": "^19.2.0",
-        "react-router-dom": "^6.30.3"
+        "react-router": "^7.13.1"
     },
     "devDependencies": {
         "@babel/preset-env": "^7.29.0",
