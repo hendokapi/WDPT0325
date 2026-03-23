@@ -1,5 +1,6 @@
 import 'dotenv/config';
 import cors from 'cors';
+import morgan from 'morgan';
 import express from 'express';
 import mongoose from 'mongoose';
 import userRouter from './routes/user.router.js';
@@ -7,10 +8,13 @@ import userRouter from './routes/user.router.js';
 const PORT = process.env.PORT;
 
 const server = express(); // creato il server base
+server.use(morgan('dev'));
 server.use(cors()); // serve a risolvere i problemi di CORS quando si collega l'api con il frontend
 server.use(express.json()); // serve ad accettare json nel body delle richieste
 
 server.use(userRouter);
+
+// server.use(gestoreDiErrori);
 
 const router = express.Router();
 

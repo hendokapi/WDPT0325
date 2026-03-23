@@ -10,7 +10,12 @@ router.get('/users', async function (request, response) {
 });
 
 router.get('/users/:userId', async (request, response, next) => {
-    const theUser = await User.findById(request.params.userId);
+    let theUser;
+    try {
+        theUser = await User.findById(request.params.userId);
+    } catch (error) {
+        theUser = null;
+    }
     if (!theUser) response.status(404).send({ message: 'Not found' });
     else response.send(theUser);
 });
