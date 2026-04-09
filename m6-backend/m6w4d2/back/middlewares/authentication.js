@@ -3,11 +3,19 @@ import User from '../models/User.js';
 
 async function authentication(request, response, next) {
     if (!request.headers.authorization)
-        return next(createHttpError.Unauthorized());
+        return response.status(301).send({
+            message: 'Unathorized',
+        });
 
     const parts = request.headers.authorization.split(' ');
-    if (parts.length != 2) return next(createHttpError.Unauthorized());
-    if (parts[0] != 'Bearer') return next(createHttpError.Unauthorized());
+    if (parts.length != 2)
+        return response.status(301).send({
+            message: 'Unathorized',
+        });
+    if (parts[0] != 'Bearer')
+        return response.status(301).send({
+            message: 'Unathorized',
+        });
 
     const jwtToken = parts[1];
 
