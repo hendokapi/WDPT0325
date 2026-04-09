@@ -31,7 +31,7 @@
 
     "http://localhost:5173/login" ---> `${process.env.FRONTEND_HOST}/login`
 
-    "http://localhost:4000/api/v1/google-callback" ---> `${process.env.FRONTEND_HOST}/api/v1/google-callback`
+    "http://localhost:3000/api/v1/google-callback" ---> `${process.env.FRONTEND_HOST}/api/v1/google-callback`
 
 - assicurarsi di avere nel file `.env` e `.env.exaple` la chiave `FRONTEND_HOST`
 
@@ -84,7 +84,7 @@ oppure usare l'hash router <HashRouter> invece del <BrowserRouter>, ma questo ri
     - Framework Preset: Vite
     - Build Command: `npm run dev`
     - Output Directory: `dist`
-    - Install command: `npm install`
+    - Install command: `npm install --legacy-peer-deps`
 
 - durante il deploy sistemare i valori delle chiavi nel file `.env` e inserirli direttamente nell'interfaccia del servizio del deploy:
     - `VITE_API_URL`: l'indirizzo di Render

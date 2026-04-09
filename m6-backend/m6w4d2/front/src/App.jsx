@@ -15,7 +15,7 @@ import Register from './pages/Register';
 
 function App() {
     return (
-        <HashRouter>
+        <BrowserRouter>
             <AuthProvider>
                 <Header></Header>
                 <Container>
@@ -47,7 +47,7 @@ function App() {
                 </Container>
                 <Footer></Footer>
             </AuthProvider>
-        </HashRouter>
+        </BrowserRouter>
     );
 }
 

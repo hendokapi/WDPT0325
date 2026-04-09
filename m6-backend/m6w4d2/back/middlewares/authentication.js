@@ -1,4 +1,3 @@
-import createHttpError from 'http-errors';
 import { verifyJWT } from '../helpers/jwt.js';
 import User from '../models/User.js';
 
@@ -26,7 +25,9 @@ async function authentication(request, response, next) {
         next();
     } catch {
         // se fallisce la verifica -> errore
-        next(createHttpError.Unauthorized());
+        response.status(301).send({
+            message: 'Unathorized',
+        });
     }
 }
 

@@ -14,6 +14,7 @@ export function AuthProvider({ children }) {
         if (jwt) {
             localStorage.setItem('token', jwt);
             setToken(jwt);
+            console.log(jwt);
             navigate('/', { replace: true });
         }
     }, [jwt, navigate, setToken]);
