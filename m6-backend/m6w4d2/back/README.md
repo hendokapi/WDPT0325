@@ -82,7 +82,7 @@ oppure usare l'hash router <HashRouter> invece del <BrowserRouter>, ma questo ri
 - su Vercel creare un progetto con queste impostazioni:
     - Root Directory: il percorso alla cartella del frontend
     - Framework Preset: Vite
-    - Build Command: `npm run dev`
+    - Build Command: `npm run build`
     - Output Directory: `dist`
     - Install command: `npm install --legacy-peer-deps`
 
